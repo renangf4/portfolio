@@ -1,0 +1,32 @@
+@import 'includes/vars.scss';
+@import 'includes/fonts.scss';
+@import 'utils/bootstrap.scss';
+body{
+  overflow: hidden;
+	font-family: 'Arial', sans-serif;
+  h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: darken(#000, 10%);
+  &:hover {
+    background: darken(#000, 30%); 
+  }
+}
+::selection{
+  background: #000;
+  color: #fff;
+}
+#preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99999;
+}
