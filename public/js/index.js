@@ -15310,34 +15310,27 @@ __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/s
 __webpack_require__(/*! slick-carousel/slick/slick.scss */ "./node_modules/slick-carousel/slick/slick.scss");
 
 $(document).ready(function () {
-  $('.slick-twoup').slick({
-    slidesToShow: 7,
+  $('#slick-twoup').slick({
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     infinite: true,
+    arrows: false,
     lazyLoad: 'ondemand',
     responsive: [{
       breakpoint: 1200,
       settings: {
         slidesToShow: 5
       }
-    }, {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 2
-      }
     }]
   });
+  var hcarousel = 0;
+  $.each($("#slick-twoup .item"), function (index, element) {
+    if ($(element).height() > hcarousel) {
+      hcarousel = $(element).height();
+    }
+  });
+  $("#slick-twoup .item").css('height', hcarousel);
 });
 
 /***/ }),
@@ -15393,8 +15386,8 @@ $.fn.alt = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\www\git\resources\js\pages\index.js */"./resources/js/pages/index.js");
-module.exports = __webpack_require__(/*! E:\www\git\resources\sass\pages\index.scss */"./resources/sass/pages/index.scss");
+__webpack_require__(/*! E:\www\portfolio-renangf4\resources\js\pages\index.js */"./resources/js/pages/index.js");
+module.exports = __webpack_require__(/*! E:\www\portfolio-renangf4\resources\sass\pages\index.scss */"./resources/sass/pages/index.scss");
 
 
 /***/ })

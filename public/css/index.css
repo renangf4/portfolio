@@ -5704,6 +5704,15 @@ section#jobs h2::before {
   height: 2px;
   background-color: #000;
 }
-section#jobs .twoup {
+section#jobs .slick-slide:focus, section#jobs .slick-slide a {
+  outline: none;
+}
+section#jobs #twoup {
+  border: 2px solid #d1d1d1;
+}
+section#jobs #twoup p {
   line-height: 1;
+}
+section#jobs #twoup p.info {
+  font-size: 0.8em;
 }

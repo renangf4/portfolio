@@ -76,7 +76,18 @@ section#jobs{
             background-color: #000;
         }
     }
-    .twoup{
-        line-height: 1;
+    .slick-slide {
+        &:focus, a {
+            outline: none;
+        }
+    }
+    #twoup{
+        border: 2px solid #d1d1d1;
+        p{
+            line-height: 1;
+            &.info{
+                font-size: .8em;
+            }
+        }
     }
 }
