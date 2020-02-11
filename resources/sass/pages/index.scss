@@ -82,11 +82,27 @@ section#jobs{
         }
     }
     #twoup{
-        border: 2px solid #d1d1d1;
+        border-bottom: 2px solid #d1d1d1;
+        position: relative;
+        &::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            background-color: #d1d1d1;
+        }
+        .box{
+            position: relative;
+        }
         p{
             line-height: 1;
             &.info{
-                font-size: .8em;
+                font-size: .7em;
+                color: #d1d1d1;
             }
         }
     }
