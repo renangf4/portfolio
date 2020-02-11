@@ -5993,10 +5993,15 @@ section#contato div.box form input[type=submit] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
-section#contato div.box form input[type=submit]:hover {
+section#contato div.box form input[type=submit]:not(:disabled):hover {
   background-color: transparent;
   color: #fff;
+}
+section#contato div.box form input[type=submit]:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 section#contato div.box a {
   opacity: 0.3;

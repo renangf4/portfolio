@@ -260,9 +260,14 @@ section#contato{
                 background-color: #bebebe;
                 transition: all .3s;
                 user-select: none;
-                &:hover{
+                cursor: pointer;
+                &:not(:disabled):hover{
                     background-color: transparent;
                     color: #fff;
+                }
+                &:disabled{
+                    opacity: .3;
+                    cursor: not-allowed;
                 }
             }
         }
