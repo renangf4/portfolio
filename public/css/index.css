@@ -5683,7 +5683,10 @@ body {
 }
 
 section#home {
+  position: relative;
+  z-index: 2;
   background-color: #2E2E2E;
+  overflow: hidden;
 }
 section#home .image {
   border-radius: 50%;
@@ -5730,6 +5733,12 @@ section#home ul li a img {
           filter: invert(100%);
 }
 
+section#skills {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #fff;
+}
 section#skills h2 {
   font-size: 3em;
   padding-bottom: 4px;
@@ -5765,6 +5774,8 @@ section#skills img:hover {
 }
 
 section#trabalhos-realizados {
+  position: relative;
+  z-index: 2;
   background-color: #f1f1f1;
 }
 section#trabalhos-realizados h2 {
@@ -5830,7 +5841,19 @@ section#trabalhos-realizados #twoup p {
 section#contato {
   background-color: #2E2E2E;
 }
+section#contato img.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 1;
+}
 section#contato div.box {
+  position: relative;
+  z-index: 3;
   background-color: #000;
 }
 section#contato div.box h2 {

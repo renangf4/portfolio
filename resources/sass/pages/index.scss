@@ -30,7 +30,10 @@
     }
 }
 section#home{
+    position: relative;
+    z-index: 2;
     background-color: $primary;
+    overflow: hidden;
     .image{
         border-radius: 50%;
         overflow: hidden;
@@ -70,6 +73,10 @@ section#home{
     }
 }
 section#skills{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background-color: #fff;
     h2{
         font-size: 3em;
         padding-bottom: 4px;
@@ -100,6 +107,8 @@ section#skills{
     }
 }
 section#trabalhos-realizados{
+    position: relative;
+    z-index: 2;
     background-color: #f1f1f1;
     h2{
         font-size: 2em;
@@ -156,7 +165,18 @@ section#trabalhos-realizados{
 }
 section#contato{
     background-color: $primary;
+    img.bg{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: 1;
+    }
     div.box{
+        position: relative;
+        z-index: 3;
         background-color: #000;
         h2{
             font-size: 2em;

@@ -24,7 +24,7 @@ $.fn.fadescroll = function() {
         let style = null;
         let post = $(this).offset().top;
         let fadet = $(window).scrollTop();
-        let effect = $(this).attr('fade-animate');
+        let effect = $(this).attr('fade-direction');
         if(effects[effect] !== undefined) {
         	style = effects[effect];
         }

@@ -15439,7 +15439,7 @@ $.fn.fadescroll = function () {
     var style = null;
     var post = $(this).offset().top;
     var fadet = $(window).scrollTop();
-    var effect = $(this).attr('fade-animate');
+    var effect = $(this).attr('fade-direction');
 
     if (effects[effect] !== undefined) {
       style = effects[effect];
