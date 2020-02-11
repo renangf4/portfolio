@@ -5612,6 +5612,19 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
+  overflow: hidden;
+}
+body #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99999;
+}
+
+body {
   font-family: "FuturaLtBTLight", sans-serif;
 }
 
@@ -5644,19 +5657,44 @@ body {
   color: #000;
 }
 
-section#perfil {
+#header header {
+  background-color: #fff;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+}
+#header header nav a.navbar-brand {
+  line-height: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+#header header nav a.navbar-brand:hover {
+  opacity: 0.7;
+}
+#header header nav a.navbar-brand:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+#header header nav ul li a {
+  font-weight: bold;
+}
+
+section#home {
   background-color: #2E2E2E;
 }
-section#perfil .image {
+section#home .image {
   border-radius: 50%;
   overflow: hidden;
   width: 250px;
 }
-section#perfil .image:hover img {
+section#home .image:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-section#perfil .image img {
+section#home .image img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-user-select: none;
@@ -5664,30 +5702,30 @@ section#perfil .image img {
       -ms-user-select: none;
           user-select: none;
 }
-section#perfil h1 {
+section#home h1 {
   font-size: 2em;
 }
 @media (min-width: 768px) {
-  section#perfil h1 {
+  section#home h1 {
     font-size: 2.5em;
   }
 }
 @media (min-width: 992px) {
-  section#perfil h1 {
+  section#home h1 {
     font-size: 3em;
   }
 }
-section#perfil ul {
+section#home ul {
   list-style-type: none;
 }
-section#perfil ul li a {
+section#home ul li a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-section#perfil ul li a:hover {
+section#home ul li a:hover {
   opacity: 0.7;
 }
-section#perfil ul li a img {
+section#home ul li a img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
@@ -5718,28 +5756,34 @@ section#skills img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section#skills img:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
-section#jobs {
+section#trabalhos-realizados {
   background-color: #f1f1f1;
 }
-section#jobs h2 {
+section#trabalhos-realizados h2 {
   font-size: 2em;
   padding-bottom: 4px;
   position: relative;
   line-height: 1;
 }
 @media (min-width: 768px) {
-  section#jobs h2 {
+  section#trabalhos-realizados h2 {
     font-size: 2.5em;
   }
 }
 @media (min-width: 992px) {
-  section#jobs h2 {
+  section#trabalhos-realizados h2 {
     font-size: 3em;
   }
 }
-section#jobs h2::before {
+section#trabalhos-realizados h2::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -5750,18 +5794,18 @@ section#jobs h2::before {
   height: 2px;
   background-color: #000;
 }
-section#jobs .slick-slide:focus, section#jobs .slick-slide a {
+section#trabalhos-realizados .slick-slide:focus, section#trabalhos-realizados .slick-slide a {
   outline: none;
 }
-section#jobs p.info {
+section#trabalhos-realizados p.info {
   font-size: 0.7em;
   color: #adacac;
 }
-section#jobs #twoup {
+section#trabalhos-realizados #twoup {
   border-bottom: 2px solid #d1d1d1;
   position: relative;
 }
-section#jobs #twoup::before {
+section#trabalhos-realizados #twoup::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -5773,39 +5817,39 @@ section#jobs #twoup::before {
           transform: translate(-50%, 50%);
   background-color: #d1d1d1;
 }
-section#jobs #twoup img {
+section#trabalhos-realizados #twoup img {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-section#jobs #twoup p {
+section#trabalhos-realizados #twoup p {
   line-height: 1;
 }
 
-section#contact {
+section#contato {
   background-color: #2E2E2E;
 }
-section#contact div.box {
+section#contato div.box {
   background-color: #000;
 }
-section#contact div.box h2 {
+section#contato div.box h2 {
   font-size: 2em;
   padding-bottom: 4px;
   position: relative;
   line-height: 1;
 }
 @media (min-width: 768px) {
-  section#contact div.box h2 {
+  section#contato div.box h2 {
     font-size: 2.5em;
   }
 }
 @media (min-width: 992px) {
-  section#contact div.box h2 {
+  section#contato div.box h2 {
     font-size: 3em;
   }
 }
-section#contact div.box h2::before {
+section#contato div.box h2::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -5816,7 +5860,7 @@ section#contact div.box h2::before {
   height: 2px;
   background-color: #fff;
 }
-section#contact div.box form label input {
+section#contato div.box form label input {
   padding: 4px;
   background-color: transparent;
   outline: none;
@@ -5826,34 +5870,34 @@ section#contact div.box form label input {
   border-left: none;
   border-right: none;
 }
-section#contact div.box form label input::-webkit-input-placeholder {
+section#contato div.box form label input::-webkit-input-placeholder {
   color: #fff;
   -webkit-user-select: none;
           user-select: none;
 }
-section#contact div.box form label input::-moz-placeholder {
+section#contato div.box form label input::-moz-placeholder {
   color: #fff;
   -moz-user-select: none;
        user-select: none;
 }
-section#contact div.box form label input:-ms-input-placeholder {
+section#contato div.box form label input:-ms-input-placeholder {
   color: #fff;
   -ms-user-select: none;
       user-select: none;
 }
-section#contact div.box form label input::-ms-input-placeholder {
+section#contato div.box form label input::-ms-input-placeholder {
   color: #fff;
   -ms-user-select: none;
       user-select: none;
 }
-section#contact div.box form label input::placeholder {
+section#contato div.box form label input::placeholder {
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-section#contact div.box form label textarea {
+section#contato div.box form label textarea {
   padding: 4px;
   background-color: transparent;
   outline: none;
@@ -5865,34 +5909,34 @@ section#contact div.box form label textarea {
   resize: none;
   height: 80px;
 }
-section#contact div.box form label textarea::-webkit-input-placeholder {
+section#contato div.box form label textarea::-webkit-input-placeholder {
   color: #fff;
   -webkit-user-select: none;
           user-select: none;
 }
-section#contact div.box form label textarea::-moz-placeholder {
+section#contato div.box form label textarea::-moz-placeholder {
   color: #fff;
   -moz-user-select: none;
        user-select: none;
 }
-section#contact div.box form label textarea:-ms-input-placeholder {
+section#contato div.box form label textarea:-ms-input-placeholder {
   color: #fff;
   -ms-user-select: none;
       user-select: none;
 }
-section#contact div.box form label textarea::-ms-input-placeholder {
+section#contato div.box form label textarea::-ms-input-placeholder {
   color: #fff;
   -ms-user-select: none;
       user-select: none;
 }
-section#contact div.box form label textarea::placeholder {
+section#contato div.box form label textarea::placeholder {
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-section#contact div.box form input[type=submit] {
+section#contato div.box form input[type=submit] {
   font-weight: bold;
   padding: 2px 32px;
   border: 1px solid #bebebe;
@@ -5904,16 +5948,16 @@ section#contact div.box form input[type=submit] {
       -ms-user-select: none;
           user-select: none;
 }
-section#contact div.box form input[type=submit]:hover {
+section#contato div.box form input[type=submit]:hover {
   background-color: transparent;
   color: #fff;
 }
-section#contact div.box a {
+section#contato div.box a {
   opacity: 0.3;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-section#contact div.box a:hover {
+section#contato div.box a:hover {
   opacity: 1;
   text-decoration: none;
 }

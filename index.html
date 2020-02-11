@@ -17,10 +17,41 @@
     <body>
         <div id="preloader">
             <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                <img src="public/img/github.png" alt="">
+                <span class="sr-only">Carregando...</span>
             </div>
         </div>
-        
-        <section class="py-5 my-5" id="perfil">
+
+        <div id="header">
+            <header>
+                <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand d-flex align-items-center anchor" href="#home">
+                        <img src="public/img/github.png">
+                        <span class="ml-2 text-uppercase">Home</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto pt-2 pt-lg-0 text-uppercase">
+                            <li class="nav-item">
+                                <a class="nav-link anchor" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link anchor" href="#trabalhos-realizados">Trabalhos realizados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link anchor" href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <section class="py-5" id="home">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -56,7 +87,7 @@
         </section>
 
         <section id="skills" class="py-5">
-            <div class="container">
+            <div class="container py-5">
                 <div class="row">
                     <div class="col-12 col-sm-6 mb-5 mb-sm-0">
                         <h2 class="text-black text-uppercase mb-3">Skills</h2>
@@ -77,8 +108,8 @@
             </div>
         </section>
 
-        <section id="jobs" class="py-5">
-            <div class="container">
+        <section id="trabalhos-realizados" class="py-5">
+            <div class="container py-5">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
                         <h2 class="text-black d-inline text-uppercase">Trabalhos realizados</h2>
@@ -171,7 +202,7 @@
             </div>
         </section>
 
-        <section id="contact" class="py-5">
+        <section id="contato" class="py-5">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-8 mx-auto">
@@ -182,11 +213,11 @@
                             <form id="xknrpdle" action="https://formspree.io/xknrpdle" method="POST" class="row">
                                 <label class="col-12 mb-4">
                                     <span class="sr-only">Nome</span>
-                                    <input type="text" name="name" class="w-100">
+                                    <input type="text" name="name" class="w-100" required>
                                 </label>
                                 <label class="col-12 mb-4">
                                     <span class="sr-only">E-mail</span>
-                                    <input type="email" name="_replyto" class="w-100">
+                                    <input type="email" name="_replyto" class="w-100" required>
                                 </label>
                                 <label class="col-12 mb-4">
                                     <span class="sr-only">Mensagem</span>
@@ -202,6 +233,7 @@
                 </div>
             </div>
         </section>
+
         <script src="public/js/index.js"></script>
     </body>
 </html>

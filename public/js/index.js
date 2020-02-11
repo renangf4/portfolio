@@ -1000,6 +1000,44 @@ exports.push([module.i, "/* Slider */\n.slick-slider {\n  position: relative;\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/utils/fadescroll.scss":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/utils/fadescroll.scss ***!
+  \*********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".fade-effect {\n  visibility: hidden;\n}\n\n@-webkit-keyframes fade-top-active {\n  0% {\n    -webkit-transform: translateY(-100%);\n            transform: translateY(-100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n    opacity: 1;\n  }\n}\n\n@keyframes fade-top-active {\n  0% {\n    -webkit-transform: translateY(-100%);\n            transform: translateY(-100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-right-active {\n  0% {\n    -webkit-transform: translateX(100%);\n            transform: translateX(100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n    opacity: 1;\n  }\n}\n@keyframes fade-right-active {\n  0% {\n    -webkit-transform: translateX(100%);\n            transform: translateX(100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-bottom-active {\n  0% {\n    -webkit-transform: translateY(100%);\n            transform: translateY(100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n    opacity: 1;\n  }\n}\n@keyframes fade-bottom-active {\n  0% {\n    -webkit-transform: translateY(100%);\n            transform: translateY(100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-left-active {\n  0% {\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n    opacity: 1;\n  }\n}\n@keyframes fade-left-active {\n  0% {\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n    opacity: 0;\n  }\n  100% {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n    opacity: 1;\n  }\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/utils/preloader.scss":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/utils/preloader.scss ***!
+  \********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n  overflow: hidden;\n}\nbody #preloader {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #fff;\n  z-index: 99999;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -15266,20 +15304,13 @@ module.exports = function (css) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./utils/functions */ "./resources/js/utils/functions.js"); // require('./utils/preloader');
+__webpack_require__(/*! ./utils/functions */ "./resources/js/utils/functions.js");
 
+__webpack_require__(/*! ./utils/preloader */ "./resources/js/utils/preloader.js");
 
 __webpack_require__(/*! bootstrap/js/dist/button */ "./node_modules/bootstrap/js/dist/button.js");
 
 __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
-
-$(document).ready(function () {
-  $('img').alt();
-  $('.navbar-nav>li>a').on('click', function () {
-    $('.navbar-collapse').collapse('hide');
-  });
-  $(window).scrollTop($(window).scrollTop() + 1);
-});
 
 /***/ }),
 
@@ -15301,15 +15332,28 @@ window.jQuery = window.$ = __webpack_require__(/*! jquery */ "./node_modules/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../app */ "./resources/js/app.js"); // require('../utils/fadescroll');
-// require('bootstrap/js/dist/carousel');
+__webpack_require__(/*! ../app */ "./resources/js/app.js");
 
+__webpack_require__(/*! ../utils/fadescroll */ "./resources/js/utils/fadescroll.js");
 
 __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
 
 __webpack_require__(/*! slick-carousel/slick/slick.scss */ "./node_modules/slick-carousel/slick/slick.scss");
 
 $(document).ready(function () {
+  $(window).scrollTop($(window).scrollTop() + 1);
+  $('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+  var headerHeight = $('header').outerHeight();
+  $('#header').height(headerHeight);
+  $('a.anchor').click(function (event) {
+    var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top - headerHeight;
+    $('html, body').animate({
+      scrollTop: targetOffset
+    }, 2000);
+  });
   $('#slick-twoup').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -15331,7 +15375,8 @@ $(document).ready(function () {
     }]
   });
   $('#slick-twoup .item').maxHeight();
-  $('#contact label').placeholder();
+  $('#contato label').placeholder();
+  $('img').alt();
 });
 $('#xknrpdle').submit(function ($event) {
   $event.preventDefault();
@@ -15357,6 +15402,59 @@ $('#xknrpdle').submit(function ($event) {
   }).always(function () {
     $button.prop('disabled', false);
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/utils/fadescroll.js":
+/*!******************************************!*\
+  !*** ./resources/js/utils/fadescroll.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../sass/utils/fadescroll.scss */ "./resources/sass/utils/fadescroll.scss");
+
+var effects = {
+  top: {
+    'animation-name': 'fade-top-active',
+    'visibility': 'visible'
+  },
+  right: {
+    'animation-name': 'fade-right-active',
+    'visibility': 'visible'
+  },
+  left: {
+    'animation-name': 'fade-left-active',
+    'visibility': 'visible'
+  },
+  bottom: {
+    'animation-name': 'fade-bottom-active',
+    'visibility': 'visible'
+  }
+};
+
+$.fn.fadescroll = function () {
+  $(this).each(function () {
+    var style = null;
+    var post = $(this).offset().top;
+    var fadet = $(window).scrollTop();
+    var effect = $(this).attr('fade-animate');
+
+    if (effects[effect] !== undefined) {
+      style = effects[effect];
+    }
+
+    if (post < fadet + 600) {
+      $(this).css(style).css({
+        'animation-duration': $(this).attr('fade-time') + 's'
+      });
+    }
+  });
+};
+
+$(window).scroll(function () {
+  $('.fade-effect').fadescroll();
 });
 
 /***/ }),
@@ -15410,6 +15508,24 @@ $.fn.placeholder = function () {
 
 /***/ }),
 
+/***/ "./resources/js/utils/preloader.js":
+/*!*****************************************!*\
+  !*** ./resources/js/utils/preloader.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../sass/utils/preloader.scss */ "./resources/sass/utils/preloader.scss");
+
+$(window).on('load', function () {
+  $('#preloader').delay(0).fadeOut('slow');
+  $('body').delay(10).css({
+    'overflow': 'visible'
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/sass/pages/index.scss":
 /*!*****************************************!*\
   !*** ./resources/sass/pages/index.scss ***!
@@ -15418,6 +15534,66 @@ $.fn.placeholder = function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/utils/fadescroll.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/utils/fadescroll.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./fadescroll.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/utils/fadescroll.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/sass/utils/preloader.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/utils/preloader.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./preloader.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/utils/preloader.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

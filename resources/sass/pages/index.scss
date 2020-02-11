@@ -1,6 +1,35 @@
 @import '../app.scss';
-
-section#perfil{
+#header{
+    header{
+        background-color: #fff;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+        nav{
+            a.navbar-brand{
+                line-height: 1;
+                transition: opacity .3s;
+                &:hover{
+                    opacity: .7;
+                }
+                &:active{
+                    transform: scale(1.1);
+                }
+            }
+            ul{
+                li{
+                    a{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+section#home{
     background-color: $primary;
     .image{
         border-radius: 50%;
@@ -64,9 +93,13 @@ section#skills{
     }
     img{
         user-select: none;
+        transition: all .3s;
+        &:hover{
+            transform: scale(.8);
+        }
     }
 }
-section#jobs{
+section#trabalhos-realizados{
     background-color: #f1f1f1;
     h2{
         font-size: 2em;
@@ -121,7 +154,7 @@ section#jobs{
         }
     }
 }
-section#contact{
+section#contato{
     background-color: $primary;
     div.box{
         background-color: #000;

@@ -1,9 +1,21 @@
 require('../app');
-// require('../utils/fadescroll');
-// require('bootstrap/js/dist/carousel');
+require('../utils/fadescroll');
 require('slick-carousel');
 require('slick-carousel/slick/slick.scss');
 $(document).ready(function () {
+    $(window).scrollTop($(window).scrollTop() + 1);
+    $('.navbar-nav>li>a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+    let headerHeight = $('header').outerHeight();
+    $('#header').height(headerHeight);
+    $('a.anchor').click(function (event) {
+        var id = $(this).attr('href'),
+            targetOffset = ($(id).offset().top - headerHeight);
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 2000);
+    });
     $('#slick-twoup').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -28,7 +40,8 @@ $(document).ready(function () {
         ]
     });
     $('#slick-twoup .item').maxHeight();
-    $('#contact label').placeholder();
+    $('#contato label').placeholder();
+    $('img').alt();
 });
 
 $('#xknrpdle').submit(function($event) {
