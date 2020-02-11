@@ -86,7 +86,7 @@ $('#xknrpdle').submit(function($event) {
     }).fail(function(data) {
         let message = 'Tente mais tarde';
         if (data.responseJSON.error == 'reCAPTCHA failed') {
-            message = 'Prove que não é um robo';
+            message = 'Prove que não é um robô';
         }
         swal({
             icon: 'error',
