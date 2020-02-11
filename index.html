@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Portfólio | Renan Morais</title>
         <link rel="stylesheet" href="public/css/index.css">
+        <link rel="shortcut icon" href="public/img/github.png" type="image/x-icon">
     </head>
     <body>
         <div id="preloader">
@@ -28,23 +29,23 @@
                         </div>
                     </div>
                     <div class="col-12 text-center my-3">
-                        <h1 class=" text-white text-uppercase">Renan Morais</h1>
+                        <h1 class="text-white text-uppercase">Renan Morais</h1>
                         <p class="text-white mb-0">Desenvolvedor Web Front-end.</p>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
                         <ul class="pl-0 mb-0 d-flex">
                             <li class="mr-2">
-                                <a href="#">
+                                <a href="#" class="d-block">
                                     <img src="public/img/github.png" alt="" class="img-fluid">
                                 </a>
                             </li>
                             <li class="mr-2">
-                                <a href="#">
+                                <a href="#" class="d-block">
                                     <img src="public/img/linkedin.png" alt="" class="img-fluid">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="d-block">
                                     <img src="public/img/instagram.png" alt="" class="img-fluid">
                                 </a>
                             </li>
@@ -57,33 +58,19 @@
         <section id="skills" class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <h2 class="text-uppercase mb-3">Skills</h2>
-                        <ul class="pl-0 mb-0">
-                            <li>
-                                HTML5
-                            </li>
-                            <li>
-                                CSS3
-                            </li>
-                            <li>
-                                SASS/SCSS
-                            </li>
-                            <li>
-                                Bootstrap/Materialize
-                            </li>
-                            <li>
-                                JavaScript
-                            </li>
-                            <li>
-                                JQuery
-                            </li>
-                            <li>
-                                GIT
-                            </li>
+                    <div class="col-12 col-sm-6 mb-5 mb-sm-0">
+                        <h2 class="text-black text-uppercase mb-3">Skills</h2>
+                        <ul class="pl-0 mb-0 text-black">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SASS/SCSS</li>
+                            <li>Bootstrap/Materialize</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>GIT</li>
                         </ul>
                     </div>
-                    <div class="col-6 d-flex align-items-center">
+                    <div class="col-12 col-sm-6 d-flex align-items-center">
                         <img src="public/img/responsive.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -94,7 +81,7 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
-                        <h2 class="d-inline">Trabalhos realizados</h2>
+                        <h2 class="text-black d-inline text-uppercase">Trabalhos realizados</h2>
                     </div>
                 </div>
                 <div class="row py-5" id="twoup">
@@ -177,18 +164,39 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <p class="info mb-0">* Não possuo direitos sobre esses projetos</p>
+                        <p class="info mb-2">* Não possuo direitos sobre esses projetos</p>
+                        <p class="mb-0">Todos os projetos foram criados do zero e sem utilizar CMS.</p>
                     </div>
                 </div>
-                <div class="row py-5" id="freelas">
-                    <div class="col-12 text-center">
-                        <h3>Freelancer</h3>
-                    </div>
-                    <div class="col-12 mt-5 mb-2">
-                        <div id="slick-freelancer">
-                            <div class="h-100">
-                                
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <div class="box d-flex flex-column py-5 px-5">
+                            <div class="text-center mb-5">
+                                <h2 class="text-white d-inline text-uppercase">Contato</h2>
                             </div>
+                            <form id="xknrpdle" action="https://formspree.io/xknrpdle" method="POST" class="row">
+                                <label class="col-12 mb-4">
+                                    <span class="sr-only">Nome</span>
+                                    <input type="text" name="name" class="w-100">
+                                </label>
+                                <label class="col-12 mb-4">
+                                    <span class="sr-only">E-mail</span>
+                                    <input type="email" name="_replyto" class="w-100">
+                                </label>
+                                <label class="col-12 mb-4">
+                                    <span class="sr-only">Mensagem</span>
+                                    <textarea name="message" class="w-100"></textarea>
+                                </label>
+                                <div class="col-12">
+                                    <input type="submit" value="Enviar" class="text-uppercase">
+                                </div>
+                            </form>
+                            <a href="https://formspree.io/" target="_blank" class="text-white text-right">Formulário Formspree</a>
                         </div>
                     </div>
                 </div>

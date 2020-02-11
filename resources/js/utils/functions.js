@@ -21,3 +21,18 @@ $.fn.alt = function () {
         }
     });
 };
+$.fn.maxHeight = function () {
+    let maxHeight = 0;
+    $.each($(this), function (index, element) {
+        maxHeight = $(element).height() > maxHeight ?
+            $(element).height() : maxHeight;
+    });
+    $(this).css('height', maxHeight);
+};
+$.fn.placeholder = function () {
+    $.each($(this), (index, element) => {
+        var $input = $(element).find(':input');
+        var $label = $(element).find('span');
+        $input.attr('placeholder', $label.text());
+    });
+};

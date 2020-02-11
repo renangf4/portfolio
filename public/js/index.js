@@ -15317,20 +15317,46 @@ $(document).ready(function () {
     infinite: true,
     arrows: false,
     lazyLoad: 'ondemand',
+    swipeToSlide: true,
     responsive: [{
-      breakpoint: 1200,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 5
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2
       }
     }]
   });
-  var hcarousel = 0;
-  $.each($("#slick-twoup .item"), function (index, element) {
-    if ($(element).height() > hcarousel) {
-      hcarousel = $(element).height();
+  $('#slick-twoup .item').maxHeight();
+  $('#contact label').placeholder();
+});
+$('#xknrpdle').submit(function ($event) {
+  $event.preventDefault();
+  var $button = $(this).find('[type=submit]'),
+      $form = $(this);
+  $button.prop('disabled', true);
+  $.ajax({
+    crossDomain: true,
+    url: $(this).attr('action'),
+    type: $(this).attr('method'),
+    data: $(this).serializeArray(),
+    headers: {
+      Accept: "application/json; charset=utf-8"
     }
+  }).done(function (data) {
+    if (data['ok'] != undefined && data['ok']) {
+      $form.trigger('reset');
+      alert('Enviado com sucesso!');
+    }
+  }).fail(function (data) {
+    console.log(data);
+    alert('Ops...Tente novamente, mais tarde!');
+  }).always(function () {
+    $button.prop('disabled', false);
   });
-  $("#slick-twoup .item").css('height', hcarousel);
 });
 
 /***/ }),
@@ -15366,6 +15392,22 @@ $.fn.alt = function () {
   });
 };
 
+$.fn.maxHeight = function () {
+  var maxHeight = 0;
+  $.each($(this), function (index, element) {
+    maxHeight = $(element).height() > maxHeight ? $(element).height() : maxHeight;
+  });
+  $(this).css('height', maxHeight);
+};
+
+$.fn.placeholder = function () {
+  $.each($(this), function (index, element) {
+    var $input = $(element).find(':input');
+    var $label = $(element).find('span');
+    $input.attr('placeholder', $label.text());
+  });
+};
+
 /***/ }),
 
 /***/ "./resources/sass/pages/index.scss":
@@ -15386,8 +15428,8 @@ $.fn.alt = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\www\portfolio\resources\js\pages\index.js */"./resources/js/pages/index.js");
-module.exports = __webpack_require__(/*! E:\www\portfolio\resources\sass\pages\index.scss */"./resources/sass/pages/index.scss");
+__webpack_require__(/*! E:\www\portfolio-renangf4\resources\js\pages\index.js */"./resources/js/pages/index.js");
+module.exports = __webpack_require__(/*! E:\www\portfolio-renangf4\resources\sass\pages\index.scss */"./resources/sass/pages/index.scss");
 
 
 /***/ })

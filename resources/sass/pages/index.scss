@@ -1,5 +1,5 @@
 @import '../app.scss';
-// @import "~bootstrap/scss/carousel";
+
 section#perfil{
     background-color: $primary;
     .image{
@@ -13,22 +13,27 @@ section#perfil{
         }
         img{
             transition: all .3s;
+            user-select: none;
         }
     }
     h1{
-        font-size: 3em;
+        font-size: 2em;
+        @media (min-width: 768px) {
+            font-size: 2.5em;
+        }
+        @media (min-width: 992px) {
+            font-size: 3em;
+        }
     }
     ul{
         list-style-type: none;
         li{
             a{
+                transition: all .3s;
                 &:hover{
-                    img{
-                        opacity: .7;;
-                    }
+                    opacity: .7;
                 }
                 img{
-                    transition: all .3s;
                     filter: invert(100%);
                 }
             }
@@ -57,11 +62,20 @@ section#skills{
             font-size: 1.5em;
         }
     }
+    img{
+        user-select: none;
+    }
 }
 section#jobs{
     background-color: #f1f1f1;
     h2{
-        font-size: 3em;
+        font-size: 2em;
+        @media (min-width: 768px) {
+            font-size: 2.5em;
+        }
+        @media (min-width: 992px) {
+            font-size: 3em;
+        }
         padding-bottom: 4px;
         position: relative;
         line-height: 1;
@@ -81,6 +95,10 @@ section#jobs{
             outline: none;
         }
     }
+    p.info{
+        font-size: .7em;
+        color: #adacac;
+    }
     #twoup{
         border-bottom: 2px solid #d1d1d1;
         position: relative;
@@ -95,14 +113,86 @@ section#jobs{
             transform: translate(-50%, 50%);
             background-color: #d1d1d1;
         }
-        .box{
-            position: relative;
+        img{
+            user-select: none;
         }
         p{
             line-height: 1;
-            &.info{
-                font-size: .7em;
-                color: #d1d1d1;
+        }
+    }
+}
+section#contact{
+    background-color: $primary;
+    div.box{
+        background-color: #000;
+        h2{
+            font-size: 2em;
+            @media (min-width: 768px) {
+                font-size: 2.5em;
+            }
+            @media (min-width: 992px) {
+                font-size: 3em;
+            }
+            padding-bottom: 4px;
+            position: relative;
+            line-height: 1;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 2px;
+                background-color: #fff;
+            }
+        }
+        form{
+            label{
+                @mixin style{
+                    padding: 4px;
+                    background-color: transparent;
+                    outline: none;
+                    color: #fff;
+                    border:{
+                        bottom: 2px solid #fff;
+                        top: none;
+                        left: none;
+                        right: none;
+                    }
+                    &::placeholder{
+                        color: #fff;
+                        user-select: none;
+                    }
+                }
+                input{
+                    @include style;
+                }
+                textarea{
+                    @include style;
+                    resize: none;
+                    height: 80px;
+                }
+            }
+            input[type="submit"]{
+                font-weight: bold;
+                padding: 2px 32px;
+                border: 1px solid #bebebe;
+                background-color: #bebebe;
+                transition: all .3s;
+                user-select: none;
+                &:hover{
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+        a{
+            opacity: .3;
+            transition: all .3s;
+            &:hover{
+                opacity: 1;
+                text-decoration: none;
             }
         }
     }

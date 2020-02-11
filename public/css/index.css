@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "FuturaLtBTLight";
+  src: url("../fonts/FuturaLtBTLight.eot");
+  src: url("../fonts/FuturaLtBTLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaLtBTLight.woff2") format("woff2"), url("../fonts/FuturaLtBTLight.woff") format("woff"), url("../fonts/FuturaLtBTLight.ttf") format("truetype"), url("../fonts/FuturaLtBTLight.svg#svgFuturaLtBTLight") format("svg");
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -5605,6 +5611,10 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto;
 }
 
+body {
+  font-family: "FuturaLtBTLight", sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -5617,17 +5627,21 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 ::-moz-selection {
-  background: #000;
+  background: #d1d1d1;
   color: #fff;
 }
 
 ::selection {
-  background: #000;
+  background: #d1d1d1;
   color: #fff;
 }
 
 .text-white {
   color: #fff;
+}
+
+.text-black {
+  color: #000;
 }
 
 section#perfil {
@@ -5645,19 +5659,35 @@ section#perfil .image:hover img {
 section#perfil .image img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 section#perfil h1 {
-  font-size: 3em;
+  font-size: 2em;
+}
+@media (min-width: 768px) {
+  section#perfil h1 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 992px) {
+  section#perfil h1 {
+    font-size: 3em;
+  }
 }
 section#perfil ul {
   list-style-type: none;
 }
-section#perfil ul li a:hover img {
+section#perfil ul li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section#perfil ul li a:hover {
   opacity: 0.7;
 }
 section#perfil ul li a img {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
@@ -5683,15 +5713,31 @@ section#skills ul {
 section#skills ul li {
   font-size: 1.5em;
 }
+section#skills img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 
 section#jobs {
   background-color: #f1f1f1;
 }
 section#jobs h2 {
-  font-size: 3em;
+  font-size: 2em;
   padding-bottom: 4px;
   position: relative;
   line-height: 1;
+}
+@media (min-width: 768px) {
+  section#jobs h2 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 992px) {
+  section#jobs h2 {
+    font-size: 3em;
+  }
 }
 section#jobs h2::before {
   content: "";
@@ -5706,6 +5752,10 @@ section#jobs h2::before {
 }
 section#jobs .slick-slide:focus, section#jobs .slick-slide a {
   outline: none;
+}
+section#jobs p.info {
+  font-size: 0.7em;
+  color: #adacac;
 }
 section#jobs #twoup {
   border-bottom: 2px solid #d1d1d1;
@@ -5723,13 +5773,147 @@ section#jobs #twoup::before {
           transform: translate(-50%, 50%);
   background-color: #d1d1d1;
 }
-section#jobs #twoup .box {
-  position: relative;
+section#jobs #twoup img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 section#jobs #twoup p {
   line-height: 1;
 }
-section#jobs #twoup p.info {
-  font-size: 0.7em;
-  color: #d1d1d1;
+
+section#contact {
+  background-color: #2E2E2E;
+}
+section#contact div.box {
+  background-color: #000;
+}
+section#contact div.box h2 {
+  font-size: 2em;
+  padding-bottom: 4px;
+  position: relative;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  section#contact div.box h2 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 992px) {
+  section#contact div.box h2 {
+    font-size: 3em;
+  }
+}
+section#contact div.box h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #fff;
+}
+section#contact div.box form label input {
+  padding: 4px;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+section#contact div.box form label input::-webkit-input-placeholder {
+  color: #fff;
+  -webkit-user-select: none;
+          user-select: none;
+}
+section#contact div.box form label input::-moz-placeholder {
+  color: #fff;
+  -moz-user-select: none;
+       user-select: none;
+}
+section#contact div.box form label input:-ms-input-placeholder {
+  color: #fff;
+  -ms-user-select: none;
+      user-select: none;
+}
+section#contact div.box form label input::-ms-input-placeholder {
+  color: #fff;
+  -ms-user-select: none;
+      user-select: none;
+}
+section#contact div.box form label input::placeholder {
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section#contact div.box form label textarea {
+  padding: 4px;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  resize: none;
+  height: 80px;
+}
+section#contact div.box form label textarea::-webkit-input-placeholder {
+  color: #fff;
+  -webkit-user-select: none;
+          user-select: none;
+}
+section#contact div.box form label textarea::-moz-placeholder {
+  color: #fff;
+  -moz-user-select: none;
+       user-select: none;
+}
+section#contact div.box form label textarea:-ms-input-placeholder {
+  color: #fff;
+  -ms-user-select: none;
+      user-select: none;
+}
+section#contact div.box form label textarea::-ms-input-placeholder {
+  color: #fff;
+  -ms-user-select: none;
+      user-select: none;
+}
+section#contact div.box form label textarea::placeholder {
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section#contact div.box form input[type=submit] {
+  font-weight: bold;
+  padding: 2px 32px;
+  border: 1px solid #bebebe;
+  background-color: #bebebe;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section#contact div.box form input[type=submit]:hover {
+  background-color: transparent;
+  color: #fff;
+}
+section#contact div.box a {
+  opacity: 0.3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section#contact div.box a:hover {
+  opacity: 1;
+  text-decoration: none;
 }
