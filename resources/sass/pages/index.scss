@@ -137,10 +137,6 @@ section#trabalhos-realizados{
             outline: none;
         }
     }
-    p.info{
-        font-size: .7em;
-        color: #adacac;
-    }
     #twoup{
         border-bottom: 2px solid #d1d1d1;
         position: relative;
@@ -155,11 +151,41 @@ section#trabalhos-realizados{
             transform: translate(-50%, 50%);
             background-color: #d1d1d1;
         }
-        img{
-            user-select: none;
+        a.box{
+            &:hover{
+                text-decoration: none;
+                opacity: .7;
+            }
+            img{
+                user-select: none;
+            }
+        }
+        #slick-twoup{
+            .item{
+                cursor: grab;
+                &:active{
+                    cursor: grabbing;
+                }
+                a{
+                    &:hover{
+                        img{
+                            filter: grayscale(0%);
+                        }
+                    }
+                    img{
+                        max-height: 100%;
+                        transition: all .3s;
+                        filter: grayscale(100%);
+                    }
+                }
+            }
         }
         p{
             line-height: 1;
+            &.info{
+                font-size: .7em;
+                color: #adacac;
+            }
         }
     }
 }
@@ -247,6 +273,18 @@ section#contato{
                 opacity: 1;
                 text-decoration: none;
             }
+        }
+    }
+}
+footer{
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+    a{
+        transition: all .3s;
+        &:hover{
+            text-decoration: none;
+            opacity: .7;
         }
     }
 }

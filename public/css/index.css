@@ -5808,10 +5808,6 @@ section#trabalhos-realizados h2::before {
 section#trabalhos-realizados .slick-slide:focus, section#trabalhos-realizados .slick-slide a {
   outline: none;
 }
-section#trabalhos-realizados p.info {
-  font-size: 0.7em;
-  color: #adacac;
-}
 section#trabalhos-realizados #twoup {
   border-bottom: 2px solid #d1d1d1;
   position: relative;
@@ -5828,14 +5824,41 @@ section#trabalhos-realizados #twoup::before {
           transform: translate(-50%, 50%);
   background-color: #d1d1d1;
 }
-section#trabalhos-realizados #twoup img {
+section#trabalhos-realizados #twoup a.box:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+section#trabalhos-realizados #twoup a.box img {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
+section#trabalhos-realizados #twoup #slick-twoup .item {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+section#trabalhos-realizados #twoup #slick-twoup .item:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+section#trabalhos-realizados #twoup #slick-twoup .item a:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+section#trabalhos-realizados #twoup #slick-twoup .item a img {
+  max-height: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
 section#trabalhos-realizados #twoup p {
   line-height: 1;
+}
+section#trabalhos-realizados #twoup p.info {
+  font-size: 0.7em;
+  color: #adacac;
 }
 
 section#contato {
@@ -5983,4 +6006,18 @@ section#contato div.box a {
 section#contato div.box a:hover {
   opacity: 1;
   text-decoration: none;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+  background-color: #000;
+}
+footer a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+footer a:hover {
+  text-decoration: none;
+  opacity: 0.7;
 }
