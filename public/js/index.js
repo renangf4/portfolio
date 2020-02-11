@@ -15355,7 +15355,8 @@ $(document).ready(function () {
     }, 2000);
   });
   $('#slick-twoup').slick({
-    slidesToShow: 4,
+    centerMode: true,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
     infinite: true,
@@ -15363,6 +15364,11 @@ $(document).ready(function () {
     lazyLoad: 'ondemand',
     swipeToSlide: true,
     responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 5
+      }
+    }, {
       breakpoint: 768,
       settings: {
         slidesToShow: 3
@@ -15370,13 +15376,21 @@ $(document).ready(function () {
     }, {
       breakpoint: 576,
       settings: {
+        centerMode: false,
         slidesToShow: 2
+      }
+    }, {
+      breakpoint: 425,
+      settings: {
+        centerMode: false,
+        slidesToShow: 1
       }
     }]
   });
   $('#slick-twoup .item').maxHeight();
   $('#contato label').placeholder();
   $('img').alt();
+  $('.mail').mailto();
 });
 $('#xknrpdle').submit(function ($event) {
   $event.preventDefault();

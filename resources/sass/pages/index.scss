@@ -19,8 +19,41 @@
                     transform: scale(1.1);
                 }
             }
+            button{
+                &:focus{
+                    outline-color: $primary;
+                }
+            }
             ul{
                 li{
+                    position: relative;
+                    &:hover{
+                        @media (min-width: 992px){
+                            &::before, &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 2px;
+                        width: 0%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        transition: all .3s;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        height: 2px;
+                        width: 0%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        transition: all .3s;
+                    }
                     a{
                         font-weight: bold;
                     }
@@ -132,12 +165,81 @@ section#trabalhos-realizados{
             background-color: #000;
         }
     }
-    .slick-slide {
-        &:focus, a {
-            outline: none;
+    p{
+        line-height: 1;
+        &.info{
+            font-size: .7em;
+            color: #adacac;
         }
     }
-    #twoup{
+    a.box{
+        transition: all .3s;
+        &:hover{
+            text-decoration: none;
+            opacity: .7;
+        }
+        img{
+            user-select: none;
+        }
+    }
+    #slick-twoup{
+        .slick-list{
+            .slick-track{
+                .slick-slide {
+                    &:focus, a {
+                        outline: none;
+                    }
+                    &.slick-center{
+                        div{
+                            .item{
+                                a{
+                                    img{
+                                        @media (min-width: 576px) {  
+                                            animation: transitioncenter ease-in 1s;
+                                            filter: grayscale(0%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @keyframes transitioncenter{
+                        0%{
+                            filter: grayscale(100%);
+                        }
+                        100%{
+                            filter: grayscale(0%);
+                        }
+                    }
+                    div{
+                        .item{
+                            cursor: grab;
+                            &:active{
+                                cursor: grabbing;
+                            }
+                            a{
+                                &:hover{
+                                    img{
+                                        @media (min-width: 576px) {  
+                                            filter: grayscale(0%);
+                                        }
+                                    }
+                                }
+                                img{
+                                    max-height: 100%;
+                                    @media (min-width: 576px) {                                        
+                                        transition: all .3s;
+                                        filter: grayscale(100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .border{
         border-bottom: 2px solid #d1d1d1;
         position: relative;
         &::before{
@@ -150,42 +252,6 @@ section#trabalhos-realizados{
             bottom: 0;
             transform: translate(-50%, 50%);
             background-color: #d1d1d1;
-        }
-        a.box{
-            &:hover{
-                text-decoration: none;
-                opacity: .7;
-            }
-            img{
-                user-select: none;
-            }
-        }
-        #slick-twoup{
-            .item{
-                cursor: grab;
-                &:active{
-                    cursor: grabbing;
-                }
-                a{
-                    &:hover{
-                        img{
-                            filter: grayscale(0%);
-                        }
-                    }
-                    img{
-                        max-height: 100%;
-                        transition: all .3s;
-                        filter: grayscale(100%);
-                    }
-                }
-            }
-        }
-        p{
-            line-height: 1;
-            &.info{
-                font-size: .7em;
-                color: #adacac;
-            }
         }
     }
 }
@@ -269,6 +335,13 @@ section#contato{
                     opacity: .3;
                     cursor: not-allowed;
                 }
+            }
+        }
+        .g-recaptcha{
+            filter: invert(100%);
+            transform: scale(.9);
+            @media (min-width: 576px) {
+                transform: scale(1);
             }
         }
         a{
