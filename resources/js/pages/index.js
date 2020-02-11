@@ -75,12 +75,23 @@ $('#xknrpdle').submit(function($event) {
         },
     }).done(function(data) {
         if (data['ok'] != undefined && data['ok']) {
-            $form.trigger('reset');
-            alert('Enviado com sucesso!');
+            swal({
+                icon: 'success',
+                text: 'Enviado com sucesso!'
+            }).then(function() {
+                $form.trigger('reset');
+                grecaptcha.reset();
+            })
         }
     }).fail(function(data) {
-        console.log(data);
-        alert('Ops...Tente novamente, mais tarde!');
+        let message = 'Tente mais tarde';
+        if (data.responseJSON.error == 'reCAPTCHA failed') {
+            message = 'Prove que não é um robo';
+        }
+        swal({
+            icon: 'error',
+            text: message
+        });
     }).always(function() {
         $button.prop('disabled', false);
     });

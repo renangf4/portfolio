@@ -19,6 +19,7 @@
         "cross-env": "^5.1",
         "laravel-mix": "^4.0.7",
         "sass-loader": "^7.1.0",
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "sweetalert": "^2.1.2"
     }
 }
