@@ -7,11 +7,9 @@ $(document).ready(function () {
     $('.navbar-nav>li>a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
-    let headerHeight = $('header').outerHeight();
-    $('#header').height(headerHeight);
     $('a.anchor').click(function (event) {
         var id = $(this).attr('href'),
-            targetOffset = ($(id).offset().top - headerHeight);
+            targetOffset = $(id).offset().top - 58;
         $('html, body').animate({
             scrollTop: targetOffset
         }, 2000);
@@ -54,7 +52,6 @@ $(document).ready(function () {
             },
         ]
     });
-    $('#slick-twoup .item').maxHeight();
     $('#contato label').placeholder();
     $('img').alt();
     $('.mail').mailto();

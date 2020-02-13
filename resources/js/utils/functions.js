@@ -1,8 +1,3 @@
-$.fn.tel = function () {
-    $.each($(this), (index, element) => {
-        $(element).attr("href", 'tel:' + $(element).text().replace(/\s/g, ''));
-    });
-};
 $.fn.mailto = function () {
     $.each($(this), (index, element) => {
         $(element).attr("href", 'mailto:' + $(element).text().replace(/\s/g, ''));
@@ -20,14 +15,6 @@ $.fn.alt = function () {
             $(element).attr('alt', alt);
         }
     });
-};
-$.fn.maxHeight = function () {
-    let maxHeight = 0;
-    $.each($(this), function (index, element) {
-        maxHeight = $(element).height() > maxHeight ?
-            $(element).height() : maxHeight;
-    });
-    $(this).css('height', maxHeight);
 };
 $.fn.placeholder = function () {
     $.each($(this), (index, element) => {
