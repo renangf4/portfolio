@@ -7,6 +7,14 @@ $(document).ready(function () {
     $('.navbar-nav>li>a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 80) {
+            $('header').addClass('fixed');
+        }
+        else {
+            $('header').removeClass('fixed');
+        }
+    });
     $('a.anchor').click(function (event) {
         var id = $(this).attr('href'),
             targetOffset = $(id).offset().top - 58;

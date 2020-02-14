@@ -1,17 +1,14 @@
 @import '../app.scss';
 #header{
-    height: 58px;
     header{
-        background-color: #fff;
         position: fixed !important;
         top: 0;
         left: 0;
         right: 0;
         z-index: 999;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+        transition: all .3s;
         nav{
             a.navbar-brand{
-                line-height: 1;
                 transition: opacity .3s;
                 &:hover{
                     opacity: .7;
@@ -19,8 +16,12 @@
                 &:active{
                     transform: scale(1.1);
                 }
+                img{
+                    filter: invert(100%);
+                }
             }
             button{
+                background-color: #fff;
                 &:focus{
                     outline-color: $primary;
                 }
@@ -42,7 +43,7 @@
                         left: 0;
                         height: 2px;
                         width: 0%;
-                        background-color: rgba(0, 0, 0, 0.7);
+                        background-color: #fff;
                         transition: all .3s;
                     }
                     &::after{
@@ -52,11 +53,33 @@
                         right: 0;
                         height: 2px;
                         width: 0%;
-                        background-color: rgba(0, 0, 0, 0.7);
+                        background-color: #fff;
                         transition: all .3s;
                     }
                     a{
                         font-weight: bold;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &.fixed{
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+            nav{
+                a.navbar-brand{
+                    img{
+                        filter: invert(0%);
+                    }
+                }
+                ul{
+                    li{
+                        &::before, &::after{
+                            background-color: #000;
+                        }
+                        a{
+                            color: #000;
+                        }
                     }
                 }
             }
@@ -68,6 +91,7 @@ section#home{
     z-index: 2;
     background-color: $primary;
     overflow: hidden;
+    min-height: 100vh;
     .image{
         border-radius: 50%;
         overflow: hidden;
